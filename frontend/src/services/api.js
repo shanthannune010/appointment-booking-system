@@ -1,10 +1,10 @@
 import axios from 'axios'
 
 // Use relative URL to work with Vite proxy, or absolute URL if VITE_API_URL is set
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
+// const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: process.env.REACT_APP_API_URL,
   headers: {
     'Content-Type': 'application/json',
   },
